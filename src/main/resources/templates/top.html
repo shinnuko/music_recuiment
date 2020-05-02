@@ -78,44 +78,41 @@ $(function(){
     <!-- 東京都情報 -->
     <div class="news">
       <h1>東京新着情報</h1>
-      <ul>
+      <ul th:each="tokyoEvent:${tokyoeventlist}">
         <li>
-          <a href="#">
-            <time></time>
-            <div class="text live_house"></div>
-	          <div class="text live_info"></div>
+          <a th:href="${tokyoEvent.eventUrl}">
+            <time th:text="${tokyoEvent.eventDate}"></time>
+            <div class="text live_house"><span th:text="${tokyoEvent.eventName}"></span></div>
+	        <div class="text live_info"><span th:text="${tokyoEvent.info}"></span></div>
          </a>
        </il>
       </ul>
-      <a class="more" href="http://localhost:8080/more?area_no=12">もっと見る</a>
     </div>
     <!-- 名古屋情報 -->
     <div class="news">
       <h1>愛知新着情報</h1>
-      <ul>
+      <ul th:each="nagoyaEvent:${nagoyaeventlist}">
         <li>
-          <a href="#">
-            <time></time>
-            <div class="text live_house"></div>
-	          <div class="text live_info"></div>
+          <a th:href="${nagoyaEvent.eventUrl}">
+            <time th:text="${nagoyaEvent.eventDate}"></time>
+            <div class="text live_house"><span th:text="${nagoyaEvent.eventName}"></span></div>
+	        <div class="text live_info"><span th:text="${nagoyaEvent.info}"></span></div>
          </a>
        </il>
       </ul>
-      <a class="more" href="http://localhost:8080/more?area_no=22">もっと見る</a>
     </div>
     <!-- 神奈川県情報 -->
     <div class="news">
       <h1>神奈川新着情報</h1>
-      <ul>
+      <ul th:each="kanagawaEvent:${kanagawaeventlist}">
         <li>
-          <a href="#">
-            <time></time>
-            <div class="text live_house"></div>
-	          <div class="text live_info"></div>
+          <a th:href="${kanagawaEvent.eventUrl}">
+            <time th:text="${kanagawaEvent.eventDate}"></time>
+            <div class="text live_house"><span th:text="${kanagawaEvent.eventName}"></span></div>
+	        <div class="text live_info"><span th:text="${kanagawaEvent.info}"></span></div>
          </a>
        </il>
       </ul>
-      <a class="more" href="http://localhost:8080/more?area_no=13">もっと見る</a>
     </div>
   </div>
 
