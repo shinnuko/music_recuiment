@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ライブ検索サービス</title>
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="土日,出演者募集中,ライブ出演,コピーバンド,出演バンド,東京,名古屋,神奈川,大阪,土曜,日曜,MOHANAK,モハナック">
+<meta name=”description” content="イベント企画/制作/運営 MOHANAK(モハナック)が主催する、東京/名古屋/神奈川/大阪を中心に土日音楽ライブイベント出演者募集。社会人バンド、コピーバンド、週末限定、プロ志向、アマ問いません
+。">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style-info.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126289985-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126289985-2');
+</script>
+<script>
+$(function(){
+	$("#menubtn").click(function(){
+		$("#menu").slideToggle();
+	});
+
+});
+</script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-site">
+        <div class="site">
+  	  <h1>
+	    <a href="http://localhost:8080/"><img src="img/logo-header.jpg" alt="Mohanak logo" width="250" height="33"></a>
+          </h1>
+        </div>
+      </div>
+
+      <div class="header-nav">
+        <button type="button" id="menubtn">
+	  <i class="fa fa-bars"></i><span>MENU</span>
+        </button>
+        <nav class="menu" id="menu">
+	  <ul>
+	    <li><a href="http://mohanak.net">トップ</a></li>
+	    <li><a href="http://mohanak.com/about/" target="blank">事業紹介</a></li>
+	    <li><a href="http://mohanak.com/contact/" target="blank">お問い合わせ</a></li>
+	  </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<div class="info">
+  <div class="info-main">
+    <!-- 東京都情報 -->
+    <div class="news">
+      <h1>ライブ詳細情報</h1>
+      <ul>
+        <div class="eventImg"><img width=100% height=100% th:src="${imgSrc}" /></div>
+        <ul class="cp_list" title="List">
+	      <li>
+            <div class="text live_datetime" th:text="日程：+${liveDate}"></div>
+		  </li>
+	      <li>
+	        <div class="text event_name" th:text="公演：+${liveName}"></div>
+	      </li>
+          <li>
+	        <div class="text live_house_name" th:text="会場：+${liveHouseName}"></div>
+	      </li>
+	      <li>
+	        <div class="text live_house_area" th:text="場所：+${liveArea}"></div>
+	      </li>
+	      <li>
+	        <div class="text live_house_play" th:text="演奏：+${play}"></div>
+	      </li>
+	      <li>
+	        <div class="text live_house_quota" th:text="出演条件：+${quota}"></div>
+	      </li>
+	      <li>
+	        <div class="text live_house_name" th:text="備考：+${liveInfo}"></div>
+	      </li>
+      </ul>
+    </div>
+    </div>
+  <!-- サイドメニュー -->
+  <div class="info-sub">
+    <div class="follow">
+      <ul>
+	<li>
+          <div class="gaiyou">
+            <a href="/search">
+	      <img class="search_img" src="img/search.jpg" />
+              <p>様々な条件から出演可能なライブ検索が可能です。</p>
+            </a>
+          </div>
+	</li>
+
+        <p class="follow-info">最新情報はこちらでも配信しています</p>
+
+        <li>
+          <a href="https://twitter.com/MOHANAK_info" class="follow-tw">
+	    <i class="fa fa-fw fa-twitter"></i>
+	    Twitter
+	  </a>
+        </li>
+	<li>
+          <a href="https://www.facebook.com/mohanak087/" class="follow-fb">
+	    <i class="fa fa-fw fa-facebook"></i>
+	    Facebook
+	  </a>
+        </li>
+	<li>
+	  <a href="http://mohanak.com/" class="follow-mohanak">
+	    <i><img class="side-img" src="img/mohanak.jpg" /></i>
+	    MOHANAK（公式ページ）
+	  </a>
+	</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+	<div class="copyright">
+	<p>Copyright &copy; MOHANAK</p>
+	</div>
+</div>
+</footer>
+
+
+</body>
+</html>
