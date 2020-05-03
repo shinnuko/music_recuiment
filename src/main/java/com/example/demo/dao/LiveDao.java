@@ -17,6 +17,10 @@ public class LiveDao implements LiveRepository {
 
 	@Autowired
 	LiveRepository live;
+	
+	public List<LiveDto> findSearchEvent(String monthStart, String monthEnd, int areaNo) {
+		return live.findSearchEvent(monthStart, monthEnd, areaNo);
+	}
 
 	@Override
 	public List<LiveDto> findAll() {
